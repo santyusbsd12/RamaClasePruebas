@@ -1,0 +1,46 @@
+// A simple example to get you started
+// JUnit assertion - the default Java assertion library
+// https://junit.org/junit5/
+
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
+public class YearCalculatorTest {
+
+    @Test
+    void shouldReturnYesWhenNumberDivisibleForFour() {
+        //Given
+        int numberObtanied = 2012;
+        
+        //When
+        String result = YearCalculator.solveYear(numberObtanied);
+        
+        //Then
+        assertEquals("yes", result);
+    }
+    
+    @Test
+    void shouldReturnNoWhenNumberDivisibleForOneHundred() {
+        //Given
+        int numberObtanied = 2000;
+        
+        //When
+        String result = YearCalculator.solveYear(numberObtanied);
+        
+        //Then
+        assertEquals("no", result);
+    }
+    
+    @Test
+    void shouldReturnYesWhenNumberDivisibleForFourHundred() {
+        //Given
+        int numberObtanied = 2000;
+        
+        //When
+        String result = YearCalculator.solveYear(numberObtanied);
+        
+        //Then
+        assertEquals("no", result);
+    }
+}

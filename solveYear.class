@@ -1,0 +1,19 @@
+
+public class YearCalculator {
+
+    public static String solveYear(int number) {
+        if(number % 4 == 0){
+            if(number % 100 == 0){
+                return "no";
+            }
+            return "yes";
+        }else if(number % 400 == 0){
+            if(number % 100 == 0){
+                return "no";
+            }
+            return "yes";
+        }
+        return "no";
+        
+    }
+}
